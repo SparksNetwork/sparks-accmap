@@ -294,6 +294,11 @@
               "size": 60.45
             },
             {
+              "name": "SD",
+              "color": "#00F",
+              "size": 40.6
+            },
+            {
               "name": "Ops",
               "isLabel": true,
               "size": 1
@@ -470,7 +475,7 @@
             {
               "name": "BC",
               "color": "#a3f31a",
-              "size": 1592.9833333333333
+              "size": 1622.8833333333334
             },
             {
               "name": "SD",
@@ -768,7 +773,7 @@
         {
           "name": "AL",
           "color": "#eb9ee0",
-          "size": 775
+          "size": 55
         },
         {
           "name": "AW",
