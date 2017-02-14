@@ -1,0 +1,142 @@
+
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+
+.container {
+  cursor: pointer;
+}
+
+.primary {
+  cursor: pointer;
+}
+
+.container:hover {
+  stroke: #000;
+  stroke-width: 1.5px;
+}
+
+.primary:hover {
+  stroke: #333;
+  stroke-width: 0.5px;
+}
+
+.label, .time {
+  text-anchor: middle;
+  font: 11px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  pointer-events: none;
+}
+
+.label {
+  fill: black;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-shadow: 0 1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff, 0 -1px 0 #fff;
+}
+.label.depth-1 {
+  font-size: 30px;
+}
+.label.depth-2 {
+  font-size: 24px;
+}
+.label.depth-3 {
+  font-size: 18px;
+}
+
+
+.time {
+  fill: white;
+  font-size: 11px;
+  text-shadow: 0 1px 0 #000, 1px 0 0 #000, -1px 0 0 #000, 0 -1px 0 #000;
+}
+
+</style>
+<svg width="960" height="960"></svg>
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script>
+
+var svg = d3.select("svg"),
+    margin = 20,
+    diameter = +svg.attr("width"),
+    g = svg.append("g").attr("transform", "translate(" + diameter / 2 + "," + diameter / 2 + ")");
+
+function className(d) {
+  if (d.data.isContainer) { return "container"; }
+  if (d.data.isPrimary) { return "primary"; }
+  if (d.data.isLabel) { return "label"; }
+  return "time";
+}
+
+function color(d) {
+  if (d.data.isContainer) { return depthColor(d.depth); }
+  if (d.data.isPrimary) { return depthColor(d.depth - 1); }
+  if (d.data.color) { return d.data.color; }
+  return "none";
+}
+
+var depthColor = d3.scaleLinear()
+    .domain([-1, 5])
+    .range(["hsl(0,0%,80%)", "hsl(0,0%,40%)"])
+    .interpolate(d3.interpolateHcl);
+
+var pack = d3.pack()
+    .size([diameter - margin, diameter - margin])
+    .padding(10);
+
+d3.json("dataset.json", function(error, root) {
+  if (error) throw error;
+
+  root = d3.hierarchy(root)
+      .sum(function(d) { return d.size; })
+      .sort(function(a, b) { return b.value - a.value; });
+
+  var focus = root,
+      nodes = pack(root).descendants(),
+      view;
+
+  var circle = g.selectAll("circle")
+    .data(nodes)
+    .enter().append("circle")
+      .attr("class", className)
+      .style("fill", function(d) { return color(d) })
+      .on("click", function(d) { console.log('click'); if (focus !== d) zoom(d), d3.event.stopPropagation(); });
+
+  var text = g.selectAll("text")
+    .data(nodes)
+    .enter().append("text")
+    .attr("class", function(d) { return className(d) + " depth-" + (d.depth - 1); })
+    .text(function(d) { return (d.data.size || d.data.isLabel) ? d.data.name : ""; });
+
+  var node = g.selectAll("circle,text");
+
+  svg
+      .style("background", depthColor(-1))
+      .on("click", function() { zoom(root); });
+
+  zoomTo([root.x, root.y, root.r * 2 + margin]);
+
+  function zoom(d) {
+    var focus0 = focus; focus = d;
+
+    var transition = d3.transition()
+        .duration(d3.event.altKey ? 7500 : 750)
+        .tween("zoom", function(d) {
+          var i = d3.interpolateZoom(view, [focus.x, focus.y, focus.r * 2 + margin]);
+          return function(t) { zoomTo(i(t)); };
+        });
+
+    // transition.selectAll("text")
+    //   .filter(function(d) { return d.parent === focus || this.style.display === "inline"; })
+    //     .style("fill-opacity", function(d) { return d.parent === focus ? 1 : 0; })
+    //     .on("start", function(d) { if (d.parent === focus) this.style.display = "inline"; })
+    //     .on("end", function(d) { if (d.parent !== focus) this.style.display = "none"; });
+  }
+
+  function zoomTo(v) {
+    var k = diameter / v[2]; view = v;
+    node.attr("transform", function(d) { return "translate(" + (d.x - v[0]) * k + "," + (d.y - v[1]) * k + ")"; });
+    circle.attr("r", function(d) { return d.r * k; });
+  }
+});
+
+</script>

@@ -1,0 +1,22 @@
+{
+  "name": "sparks-accmap",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^7.0.5",
+    "@types/ramda": "0.0.3",
+    "firebase": "^3.6.9",
+    "firebase-admin": "^4.1.0",
+    "ramda": "^0.23.0",
+    "toggl-api": "^1.0.1",
+    "traverse": "^0.6.6",
+    "ts-node": "^2.1.0",
+    "typescript": "^2.1.6"
+  }
+}
