@@ -7,7 +7,7 @@
       "pid": 17152949
     },
     {
-      "name": "Funding",
+      "name": "StratPlan",
       "pid": 17153947
     },
     {
@@ -21,18 +21,8 @@
       ]
     },
     {
-      "name": "Members",
-      "pid": 17152957,
-      "children": [
-        {
-          "name": "Recruit",
-          "pid": 10389973
-        },
-        {
-          "name": "Onboard",
-          "pid": 17152954
-        }
-      ]
+      "name": "Onboard",
+      "pid": 17152954
     },
     {
       "name": "Ops",
