@@ -12,26 +12,6 @@
           "isPrimary": true,
           "children": [
             {
-              "name": "AL",
-              "color": "#eb9ee0",
-              "size": 45
-            },
-            {
-              "name": "BC",
-              "color": "#a3f31a",
-              "size": 31.533333333333335
-            },
-            {
-              "name": "HB",
-              "color": "#4114a1",
-              "size": 30
-            },
-            {
-              "name": "SD",
-              "color": "#00F",
-              "size": 52.483333333333334
-            },
-            {
               "name": "AllHands",
               "isLabel": true,
               "size": 1
@@ -49,6 +29,11 @@
           "name": "StratPlan",
           "isPrimary": true,
           "children": [
+            {
+              "name": "SD",
+              "color": "#00F",
+              "size": 26.05
+            },
             {
               "name": "StratPlan",
               "isLabel": true,
@@ -84,6 +69,11 @@
           "name": "Marketing",
           "isPrimary": true,
           "children": [
+            {
+              "name": "AL",
+              "color": "#eb9ee0",
+              "size": 32.833333333333336
+            },
             {
               "name": "Marketing",
               "isLabel": true,
@@ -128,7 +118,12 @@
                 {
                   "name": "AW",
                   "color": "#2f8c83",
-                  "size": 20
+                  "size": 11.5
+                },
+                {
+                  "name": "SD",
+                  "color": "#00F",
+                  "size": 27.633333333333333
                 },
                 {
                   "name": "IT",
@@ -151,12 +146,12 @@
                 {
                   "name": "AW",
                   "color": "#2f8c83",
-                  "size": 34.56666666666667
+                  "size": 94.3
                 },
                 {
                   "name": "AL",
                   "color": "#eb9ee0",
-                  "size": 31.583333333333332
+                  "size": 251.71666666666667
                 },
                 {
                   "name": "ER",
@@ -166,7 +161,7 @@
                 {
                   "name": "MAB",
                   "color": "#77a567",
-                  "size": 190.61666666666667
+                  "size": 188.38333333333333
                 },
                 {
                   "name": "Acctg",
@@ -189,7 +184,12 @@
                 {
                   "name": "AW",
                   "color": "#2f8c83",
-                  "size": 14.15
+                  "size": 29.15
+                },
+                {
+                  "name": "SD",
+                  "color": "#00F",
+                  "size": 67.95
                 },
                 {
                   "name": "Legal",
@@ -210,11 +210,6 @@
               "isPrimary": true,
               "children": [
                 {
-                  "name": "HB",
-                  "color": "#4114a1",
-                  "size": 30
-                },
-                {
                   "name": "Process",
                   "isLabel": true,
                   "size": 1
@@ -230,27 +225,22 @@
             {
               "name": "AW",
               "color": "#2f8c83",
-              "size": 254.08333333333334
+              "size": 303.8666666666667
             },
             {
               "name": "AL",
               "color": "#eb9ee0",
-              "size": 1406.0333333333333
-            },
-            {
-              "name": "HB",
-              "color": "#4114a1",
-              "size": 149
+              "size": 934.2166666666667
             },
             {
               "name": "MAB",
               "color": "#77a567",
-              "size": 161.85591666666667
+              "size": 234.23333333333332
             },
             {
               "name": "SD",
               "color": "#00F",
-              "size": 181.43333333333334
+              "size": 77.81666666666666
             },
             {
               "name": "Ops",
@@ -316,11 +306,6 @@
                   "isPrimary": true,
                   "children": [
                     {
-                      "name": "SD",
-                      "color": "#00F",
-                      "size": 1355.7666666666667
-                    },
-                    {
                       "name": "Feat",
                       "isLabel": true,
                       "size": 1
@@ -357,24 +342,14 @@
                   "isPrimary": true,
                   "children": [
                     {
-                      "name": "AL",
-                      "color": "#eb9ee0",
-                      "size": 53.63333333333333
-                    },
-                    {
                       "name": "BC",
                       "color": "#a3f31a",
-                      "size": 433.96666666666664
-                    },
-                    {
-                      "name": "HB",
-                      "color": "#4114a1",
-                      "size": 315
+                      "size": 488.51666666666665
                     },
                     {
                       "name": "SD",
                       "color": "#00F",
-                      "size": 544.75
+                      "size": 61.93333333333333
                     },
                     {
                       "name": "Fix",
@@ -389,6 +364,11 @@
               "name": "Dev",
               "isPrimary": true,
               "children": [
+                {
+                  "name": "SD",
+                  "color": "#00F",
+                  "size": 1040.1833333333334
+                },
                 {
                   "name": "Dev",
                   "isLabel": true,
@@ -411,7 +391,12 @@
                 {
                   "name": "AW",
                   "color": "#2f8c83",
-                  "size": 14.15
+                  "size": 29.15
+                },
+                {
+                  "name": "SD",
+                  "color": "#00F",
+                  "size": 67.95
                 },
                 {
                   "name": "Test",
@@ -429,7 +414,7 @@
             {
               "name": "BC",
               "color": "#a3f31a",
-              "size": 209.53333333333333
+              "size": 411.8333333333333
             },
             {
               "name": "SD",
@@ -462,7 +447,7 @@
                 {
                   "name": "SD",
                   "color": "#00F",
-                  "size": 274.73333333333335
+                  "size": 384.8
                 },
                 {
                   "name": "Consult",
@@ -485,22 +470,22 @@
                 {
                   "name": "AW",
                   "color": "#2f8c83",
-                  "size": 1791.2833333333333
+                  "size": 91.15
                 },
                 {
-                  "name": "BR",
-                  "color": "#2a7114",
-                  "size": 876.0666666666667
+                  "name": "AL",
+                  "color": "#eb9ee0",
+                  "size": 155.83333333333334
                 },
                 {
                   "name": "ER",
                   "color": "#57c3f9",
-                  "size": 534.7666666666667
+                  "size": 436.75
                 },
                 {
                   "name": "SD",
                   "color": "#00F",
-                  "size": 1376.5666666666666
+                  "size": 677.1833333333333
                 },
                 {
                   "name": "Imp",
@@ -521,9 +506,14 @@
               "isPrimary": true,
               "children": [
                 {
+                  "name": "AW",
+                  "color": "#2f8c83",
+                  "size": 435.23333333333335
+                },
+                {
                   "name": "ER",
                   "color": "#57c3f9",
-                  "size": 313.3333333333333
+                  "size": 26.783333333333335
                 },
                 {
                   "name": "Material",
@@ -546,7 +536,7 @@
                 {
                   "name": "BR",
                   "color": "#2a7114",
-                  "size": 3984.7833333333333
+                  "size": 7195.833333333333
                 },
                 {
                   "name": "Onsite",
@@ -567,9 +557,19 @@
               "isPrimary": true,
               "children": [
                 {
+                  "name": "AL",
+                  "color": "#eb9ee0",
+                  "size": 3.2333333333333334
+                },
+                {
+                  "name": "ER",
+                  "color": "#57c3f9",
+                  "size": 80.88333333333334
+                },
+                {
                   "name": "SD",
                   "color": "#00F",
-                  "size": 116.1
+                  "size": 329.9166666666667
                 },
                 {
                   "name": "Sales",
@@ -587,17 +587,7 @@
             {
               "name": "AW",
               "color": "#2f8c83",
-              "size": 251.3
-            },
-            {
-              "name": "AL",
-              "color": "#eb9ee0",
-              "size": 20.216666666666665
-            },
-            {
-              "name": "BR",
-              "color": "#2a7114",
-              "size": 178.15
+              "size": 75.31666666666666
             },
             {
               "name": "ER",
@@ -605,14 +595,9 @@
               "size": 23
             },
             {
-              "name": "HB",
-              "color": "#4114a1",
-              "size": 330
-            },
-            {
               "name": "SD",
               "color": "#00F",
-              "size": 29.8
+              "size": 75.31666666666666
             },
             {
               "name": "ProSvc",
@@ -638,24 +623,9 @@
               "isPrimary": true,
               "children": [
                 {
-                  "name": "AW",
-                  "color": "#2f8c83",
-                  "size": 61.333333333333336
-                },
-                {
-                  "name": "BR",
-                  "color": "#2a7114",
-                  "size": 575.8333333333334
-                },
-                {
                   "name": "ER",
                   "color": "#57c3f9",
-                  "size": 466.1166666666667
-                },
-                {
-                  "name": "HB",
-                  "color": "#4114a1",
-                  "size": 555
+                  "size": 187.08333333333334
                 },
                 {
                   "name": "Helpdesk",
@@ -687,27 +657,22 @@
         {
           "name": "AW",
           "color": "#2f8c83",
-          "size": 69.35
+          "size": 225.86666666666667
         },
         {
           "name": "BR",
           "color": "#2a7114",
-          "size": 493.1333333333333
+          "size": 110.03333333333333
         },
         {
           "name": "ER",
           "color": "#57c3f9",
-          "size": 58.266666666666666
-        },
-        {
-          "name": "HB",
-          "color": "#4114a1",
-          "size": 405
+          "size": 57.7
         },
         {
           "name": "SD",
           "color": "#00F",
-          "size": 694.15
+          "size": 705.05
         },
         {
           "name": "Org",
